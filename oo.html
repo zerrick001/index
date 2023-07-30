@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login & Registration Form</title>
+   
+    <link rel="stylesheet" href="oo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      .password-container {
+        position: relative;
+      }
+      .password-toggle {
+        position: absolute;
+        top: 36%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: small;
+      }
+    </style>
+</head>
+<body>
+    <br> <br>
+    <div class="container"> 
+      <input type="checkbox" id="check">
+      <div class="login form" id="loginSection">
+        <header>Login</header>
+        <form action="#">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter your email" required>
+  
+          <label for="loginPassword">Password</label>
+          <div class="password-container">
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <span class="password-toggle" onclick="togglePasswordVisibility('loginPassword')">Show</span>
+          </div>
+          <a href="#">Forgot password?</a>
+          <input type="button" class="button" value="Login">
+        </form>
+        <div class="signup">
+          <span class="signup">Don't have an account?
+           <label for="check">Register</label>
+          </span>
+        </div>
+      </div>
+
+      <div class="registration form" id="registerSection">
+        <header>Register</header>
+        <form action="#">
+          <label for="fullName">Full Name <span class="required-marker">*</span></label>
+          <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+          <label for="username">Username<span class="required-marker">*</span></label>
+          <input type="text" id="username" placeholder="Enter your username" required>
+
+          <label for="phoneNumber">Phone Number<span class="required-marker">*</span></label>
+          <input type="text" id="phoneNumber" placeholder="Enter your phone number" required>
+
+          <label for="signupEmail">Email<span class="required-marker">*</span></label>
+          <input type="text" id="signupEmail" placeholder="Enter your email" required>
+
+          <label for="gender">Gender<span class="required-marker">*</span></label>
+          <select id="gender" required>
+            <option value="">Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+          
+          <label for="paymentPage">Go to payment Page<span class="required-marker">*</span></label>
+          <input type="text" id="paymentPage" placeholder="click here to go payment page" onclick="openPaymentPopup()" required>
+
+          <div class="overlay" id="paymentOverlay">
+            <div class="payment-content">
+              <h3>Payment Page</h3>
+  <div class="#">
+    <i class="refresh-icon fas fa-sync-alt" onclick="showRandomInformationPage()"></i>
+    <div class="information-page" id="page1">
+      <h3 style="color: rgb(0, 255, 0);">eSewa</h3> <hr>
+      <small>username</small>
+      <p>Safal Bhusal</p>
+      <small>number</small>
+      <p>9844782425</p>
+      <small>remarks</small>
+      <p>quickfaze</p>
+    </div>
+    <div class="information-page" id="page2">
+      <h3 style="color: rgb(255, 0, 0);">IME Pay</h3><hr>
+      <small>username</small>
+      <p>Safal Bhusal</p>
+      <small>number</small>
+      <p>9844782425</p>
+      <small>remarks</small>
+      <p>quickfaze</p>
+    </div>
+    <div class="information-page" id="page3">
+      <h3 style="color: rgb(53, 4, 216);">Bank</h3><hr>
+      <small>username</small>
+      <p>Safal Bhusal</p>
+      <small>number</small>
+      <p>1010100101010101</p>
+      <small>remarks</small>
+      <p>quickfaze</p>
+    </div>
+  </div> 
+<hr>
+  <div class="amtcontainer">
+    <p class="left">Amount:</p>
+    <p class="right">NPR 3000</p>
+  </div>
+  <hr>
+  <label for="ss">Your Name<span class="required-marker">*</span></label>
+  <div class="input-container">
+    <input type="text" placeholder="Enter your Full Name">
+</div>
+<label for="ss">Email<span class="required-marker">*</span></label>
+<div class="input-container">
+  <input type="text" placeholder="Enter your Email">
+</div>
+
+<label for="ss">Select<span class="required-marker">*</span></label>
+              <select  id="ss" required>
+            <option value="">Select your payment</option>
+            <option value="male">E-Wallet</option>
+            <option value="female">E-Bank</option>
+          </select>
+<br>
+              <label for="fileInput"><small style="color: rgb(26, 219, 26);">*Please upload your payment voucher*</small></label>
+              <input class="aa" type="file" id="fileInput" name="fileInput">
+
+             <small> <p style="color: red; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                *note: Do not upload fake payment vouchers. It's against the rules and your account may get suspended.
+            
+                <a href="warning.html" style="font-size: small; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Read More</a></p><br></small>
+              <button class="aa" id="confirmPaymentBtn" onclick="handlePayment()">Confirm Payment</button>
+            </div>
+          </div>
+
+          <label for="signupPassword">Password<span class="required-marker">*</span></label>
+          <div class="password-container">
+            <input type="password" id="signupPassword" placeholder="Create a password" required>
+            <span class="password-toggle" onclick="togglePasswordVisibility('signupPassword')">Show</span>
+          </div>
+
+          <label for="referralCode">Referral Code<span class="required-marker" style="color: rgb(34, 235, 34);">*</span></label>
+<div class="referral-code-container">
+  <input type="text" id="referralCode" placeholder="Enter referral code (optional)" required>
+</div>
+
+          <p id="errorText" class="error-message"></p>
+          <button type="button" id="nextButton" onclick="registerUser()">Register</button>
+         </form>
+         <div class="signup">
+          <span class="signup">Already have an account? <label for="check">Login</label></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="oo.js"></script>
+  
+</body>
+</html>

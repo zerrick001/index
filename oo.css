@@ -1,0 +1,437 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
+
+.container .form{
+  padding: 1rem;
+}
+.form header{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+ .form input{
+   height: 60px;
+   width: 100%;
+   padding: 0 15px;
+   font-size: 17px;
+   margin-bottom: 1.3rem;
+   border: 1px solid #ddd;
+   border-radius: 9px;
+   outline: none;
+ }
+ .form input:focus{
+   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+ }
+ #gender {
+  height: 60px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 16px;
+  margin-bottom: 1.3rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9 0%, #fff 100%);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#gender:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+}
+
+#gender option {
+  padding: 5px;
+}
+
+.form a{
+  font-size: 16px;
+  color: rgba(10,25,189,1);
+  text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+.form input.button{
+  color: #fff;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form input.button:hover{
+  background-image: linear-gradient(to right, #640aca 0%, #1c6efc 100%);
+}
+.signup{
+  font-size: 17px;
+  text-align: center;
+}
+.signup label{
+  color: rgba(10,25,189,1);
+  cursor: pointer;
+}
+.signup label:hover{
+  text-decoration: underline;
+}
+
+
+/* You can also customize other elements in the payment section based on the existing CSS styles. */
+/* CSS to style the "Next" button */
+button {
+  color: #fff;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: .1rem;
+  cursor: pointer;
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 9px;
+}
+
+button:hover {
+  background-image: linear-gradient(to right, #640aca 0%, #1c6efc 100%);
+
+}
+
+#confirmationSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid #feca57;
+  border-radius: 10px;
+  background-color: #f9fbe7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#confirmationSection h1 {
+  color: #ff6f00;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #ffe082;
+}
+
+#confirmationSection button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff6f00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#confirmationSection button:hover {
+  background-color: #ffa000;
+}
+
+.required-marker {
+  color: red;
+  margin-left: 5px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.information-page {
+  display: none;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Styling for headers and small tags */
+h3 {
+  margin: 10px 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+small {
+  color: #888;
+}
+
+/* Styling for horizontal rules */
+hr {
+  border: none;
+  border-top: 1px solid #000000;
+  margin: 10px 0;
+}
+
+/* Styling for different sections */
+#page1
+ {
+  background-color: #f7f7f7;
+}
+
+#page2 {
+  background-color: #f0f0f0;
+}
+
+#page3 {
+  background-color: #f7f7f7;
+}
+
+.amtcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  order: 1; /* Make the "Amount" appear first */
+}
+
+.right {
+  order: 2; /* Make the "Rs 3000" appear second */
+}
+
+/* Assuming you have FontAwesome icons enabled for the close icon */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Additional styles for responsive design */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .information-page {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* this issssssssssssssssssssssssssssssssssssssssssssssss */
+.disabled-input {
+  pointer-events: none;
+  background-color: #f0f0f0;
+}
+
+/* Styling for the payment overlay */
+/* Styling for the overlay */
+.overlay {
+  display: none; /* Hide the overlay by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 9999; /* Ensure the overlay appears above other elements */
+}
+
+/* Styling for the payment content */
+.payment-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; /* White background for the payment content */
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 110%;
+  max-height: 90vh; /* Set a maximum height for the payment content */
+  overflow-y: auto; /* Add a vertical scrollbar when content overflows */
+}
+
+/* Styling for the heading */
+.payment-content h3 {
+  text-align: center;
+  color: #000; /* Dark text color */
+  font-weight: bolder;
+}
+
+/* Styling for each information page */
+.information-page {
+  margin-bottom: 5px;
+  padding: 20px;
+  border: 1px solid #000; /* Gray border */
+  border-radius: 5px;
+}
+
+/* Styling for the horizontal rules */
+.information-page hr {
+  border: none;
+  height: 1px;
+  background-color: #000; /* Gray horizontal rule */
+}
+
+/* Styling for headings within the information page */
+.information-page h3 {
+  text-align: center;
+  color: #b300ff; /* Purple text color */
+}
+
+/* Styling for small text elements */
+.information-page small {
+  font-size: 10px;
+  color: #535252; /* Light gray text color */
+}
+
+/* Styling for paragraphs within the information page */
+.information-page p {
+  margin: 4px 0;
+}
+
+/* Styling for the refresh icon */
+.refresh-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #2575fc; /* Blue icon color */
+}
+
+.overlay.visible {
+  display: block;
+}
+
+form input.aa {
+  border: none;
+  padding: 10px;
+  margin: 0;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style the required marker (e.g., asterisk) */
+.required-marker {
+  color: red;
+}
+
+/* Style the select element */
+select#ss {
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  /* Optional: Add a custom arrow using the ::after pseudo-element */
+  position: relative;
+}
+
+/* Optional: Custom arrow for the select element */
+select#ss::after {
+  content: "\25BE"; /* Unicode code point for downward arrow */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Avoid interfering with the select functionality */
+}
+
+/* Optional: Remove default styling for the dropdown arrow in some browsers */
+select#ss::-ms-expand {
+  display: none;
+}
+
+/* Optional: Style the options */
+select#ss option {
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+/* ... Existing styles ... */
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 600px) {
+  /* Center the payment overlay and reduce its size */
+  .payment-content {
+    width: 90%;
+    max-width: 350px;
+    padding: 15px;
+  }
+
+  /* Adjust the position of the payment content */
+  .payment-content {
+    top: 38%;
+    transform: translate(-50%, -40%);
+  }
+
+  /* Reduce the font size for better fit on mobile screens */
+  .payment-content h3 {
+    font-size: 20px;
+  }
+
+  .payment-content label {
+    font-size: 15px;
+  }
+
+  .payment-content input {
+    font-size: 15px;
+  }
+
+  .payment-content button {
+    font-size: 15px;
+  }
+}
